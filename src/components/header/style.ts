@@ -6,7 +6,7 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${pxToRem(0)} ${pxToRem(40)}
+    padding: ${pxToRem(10)} ${pxToRem(40)}
 `
 
 export const Text = styled.text`
