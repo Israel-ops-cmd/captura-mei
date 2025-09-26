@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { ThemeProvider } from "styled-components"
+import { theme } from "./styles/Theme"
+import { GlobalStyle } from "./types/GlobalStyle"
+import { Header } from "./components/header"
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route>
-
-        </Route>
-      </Routes>
-    </Router>
+    <ThemeProvider theme = {theme}>
+       <GlobalStyle />
+       <Header />
+    </ThemeProvider>
   )
 }
 
