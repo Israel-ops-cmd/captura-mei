@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const StyledH1 = styled.h1`
     font-size: ${pxToRem(32)};
-    font-weight: 500;
+    font-weight: 600;
 `
 
 export const styledH2 = styled.h2`
@@ -37,7 +37,7 @@ export const styledH2 = styled.h2`
 
 export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.button};
-    color: '#ffffffff';
+    color: #ffffffff;
     border: none;
     border-radius: ${pxToRem(8)};
     padding: ${pxToRem(12)} ${pxToRem(24)};
