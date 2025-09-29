@@ -7,57 +7,77 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: ${pxToRem(80)}
+    margin-top: ${pxToRem(80)};
+    padding: 0 ${pxToRem(20)};
+
+    @media (max-width: 768px) {
+        margin-top: ${pxToRem(40)};
+    }
 `
 
 export const Text = styled.p`
     font-size: ${pxToRem(20)};
     margin-top: ${pxToRem(10)};
+
+    @media (max-width: 768px) {
+        font-size: ${pxToRem(16)};
+    }
 `
+
 export const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: ${pxToRem(20)};
 `
+
 export const Card = styled.div`
-  border-radius: ${pxToRem(12)};
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  overflow: hidden;
-  width: ${pxToRem(250)};
-  display: flex;
-  flex-direction: column;
-  margin-top: ${pxToRem(20)};
-  margin-bottom: ${pxToRem(40)};
+    border-radius: ${pxToRem(12)};
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: ${pxToRem(250)};
+    display: flex;
+    flex-direction: column;
+    margin-top: ${pxToRem(20)};
+    margin-bottom: ${pxToRem(40)};
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+        width: 80%;
+        margin-bottom: ${pxToRem(30)};
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+`
+
+const cardHeaderStyles = `
+    height: ${pxToRem(80)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const Card_Header_1 = styled.div`
     background-color: ${({ theme }) => theme.colors.card_1};
-    height: ${pxToRem(80)};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${cardHeaderStyles}
 `
 export const Card_Header_2 = styled.div`
     background-color: ${({ theme }) => theme.colors.card_2};
-    height: ${pxToRem(80)};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${cardHeaderStyles}
 `
 export const Card_Header_3 = styled.div`
     background-color: ${({ theme }) => theme.colors.card_3};
-    height: ${pxToRem(80)};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${cardHeaderStyles}
 `
 export const Card_Header_4 = styled.div`
     background-color: ${({ theme }) => theme.colors.card_4};
-    height: ${pxToRem(80)};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${cardHeaderStyles}
 `
 
 export const Card_Body = styled.div`
@@ -65,17 +85,27 @@ export const Card_Body = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: ${pxToRem(12)}; 
+    gap: ${pxToRem(12)};
 `
+
 export const CardTitle = styled.h3`
-  font-size: ${pxToRem(18)};
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.text};
-  margin: 0;
+    font-size: ${pxToRem(18)};
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.text};
+    margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: ${pxToRem(16)};
+    }
 `
+
 export const CardText = styled.p`
-  font-size: ${pxToRem(14)};y
-  color: ${({ theme }) => theme.colors.text};
-  margin: 0;
-  text-align: center;
+    font-size: ${pxToRem(14)};
+    color: ${({ theme }) => theme.colors.text};
+    margin: 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: ${pxToRem(13)};
+    }
 `
