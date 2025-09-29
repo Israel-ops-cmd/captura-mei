@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { FAQContainer, FAQItem, FAQTitle, Question, Answer } from "./style";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React, { useState } from "react"
+import { FAQContainer, FAQItem, FAQTitle, Question, Answer } from "./style"
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 
 const faqData = [
   {
@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: "Quais são os benefícios de ser MEI?",
-    answer: "Direito a CNPJ, emissão de nota fiscal, acesso à previdência social e facilidades para crédito bancário."
+    answer: "Direito a CNPJ, emissão de nota fiscal, benefícios do INSS e aposentadoria e facilidades para crédito bancário."
   },
   {
     question: "O que acontece se eu não pagar o DAS?",
@@ -30,11 +30,11 @@ const faqData = [
 ];
 
 export const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
   return (
     <FAQContainer>
@@ -49,5 +49,5 @@ export const FAQ: React.FC = () => {
         </FAQItem>
       ))}
     </FAQContainer>
-  );
-};
+  )
+}
