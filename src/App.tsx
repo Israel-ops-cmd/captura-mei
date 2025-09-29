@@ -3,6 +3,7 @@ import { theme } from "./styles/Theme"
 import { GlobalStyle } from "./types/GlobalStyle"
 import { Header } from "./components/header"
 import { Hero } from "./components/hero"
+import { FAQ } from "./components/faq"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
        <GlobalStyle />
        <Header />
        <Hero />
+       <FAQ />
     </ThemeProvider>
   )
 }
