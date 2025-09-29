@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Portal MEI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Um site que ajuda microempreendedores a verificar e regularizar a situação do seu CNPJ.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição
 
-## React Compiler
+O **Portal MEI** é um site desenvolvido para informar microempreendedores individuais (MEIs) sobre a situação do seu CNPJ e oferecer orientações sobre como regularizar pendências.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo principal é ajudar os usuários a entenderem se o seu MEI está ativo, inapto ou com débitos, e indicar soluções práticas para cada caso.
 
-## Expanding the ESLint configuration
+O site apresenta informações de forma clara, organizado em:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Cards informativos**  
+- **Seções de perguntas frequentes (FAQ)**  
+- **Canal de contato direto via e-mail e WhatsApp**  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Cards informativos**: Mostram as principais situações do MEI:
+  - Aberto sem uso
+  - Fechado com pendências
+  - Tudo em dia
+  - Com parcelamento  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  Cada card possui botão **"Saiba mais"** que abre um **modal** com informações detalhadas.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Modal interativo**: Permite que o usuário leia detalhes sobre cada situação do MEI sem sair da página.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **FAQ**: Perguntas frequentes expansíveis para esclarecer dúvidas comuns.
+
+- **Contato direto**:  
+  - [WhatsApp](https://wa.me/558420107912)  
+  - [E-mail](mailto:notificacao@portalmei.net.br)
+
+- **Design responsivo**: Adaptado para desktop, tablet e celular, com menu simplificado em telas menores.
+
+---
+
+## Tecnologias utilizadas
+
+- **React** (com TypeScript)  
+- **Styled-Components** para estilização CSS-in-JS  
+- **React Icons** para ícones nos cards e FAQs  
+- **Responsividade** via Media Queries  
+
+---
+
+## Como utilizar
+
+1. Clone o repositório:
+
+git clone <https://github.com/Israel-ops-cmd/captura-mei.git>
+
+
+2. Instale as dependências:
+
+npm install
+
+
+3. Inicie o projeto em ambiente de desenvolvimento:
+
+npm run dev
+
+
+4. Abra o navegador no endereço indicado (portalmei.net.br) e visualize o site.
+
+---
+
+## Contato
+
+- **E-mail**: [notificacao@portalmei.net.br](mailto:notificacao@portalmei.net.br)  
+- **WhatsApp**: [Clique para enviar mensagem](https://wa.me/558420107912)
+
+---
+
+## Observações
+
+O Portal MEI é um projeto informativo, voltado para orientar microempreendedores sobre suas obrigações fiscais e a regularização do CNPJ. Ele não substitui o atendimento profissional de um contador ou órgão oficial da Receita Federal.
