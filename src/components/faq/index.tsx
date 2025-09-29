@@ -37,7 +37,7 @@ export const FAQ: React.FC = () => {
   }
 
   return (
-    <FAQContainer>
+    <FAQContainer id="faq">
       <FAQTitle>Perguntas Frequentes</FAQTitle>
       {faqData.map((item, index) => (
         <FAQItem key={index}>

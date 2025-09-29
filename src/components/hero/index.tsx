@@ -121,7 +121,15 @@ export const Hero: React.FC = () => {
                 </Card>
             </Cards>
 
-            <Button>Regularizar agora</Button>
+            <Button
+                as="a"
+                href="https://wa.me/558420107912"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Regularizar agora
+            </Button>
+
 
             {/* Modal */}
             {isOpen && (

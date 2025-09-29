@@ -6,8 +6,8 @@ export const Header: React.FC = () => {
         <Container>
             <Text>Portal MEI</Text>
             <Nav>
-                <NavLink>Perguntas frequentes</NavLink>
-                <NavLink>Contato</NavLink>
+                <NavLink href="#faq">Perguntas frequentes</NavLink>
+                <NavLink href="#contato">Contato</NavLink>
             </Nav>
         </Container>
     )
